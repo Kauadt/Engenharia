@@ -1,377 +1,1113 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Resets */
 
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+.hidden {
+    display: none;
 }
 
+html,
+body {
+    scroll-behavior: smooth !important;
+}
+
+nav a {
+    transition: 0.5 ease-in-out;
+}
+
+
+/* #2E2D32 
+    #575757
+*/
 :root {
-    --purple: #380568;
-    --lightPurple: #996AC4;
-    --white: #ffffff;
+    --gray: #242426;
+    --lightGray: #414141;
+    --orange: #FF7426;
+    --poppins: 'Poppins', sans-serif;
     --raleway: 'Raleway', sans-serif;
-    --roboto: 'Roboto', sans-serif;
-    ;
 }
 
+.wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: var(--gray);
+    position: relative;
+}
+
+/* 
+body{
+    background-color: var(--gray);
+} */
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--raleway) !important;
+}
+
+p,
+a {
+    font-family: var(--poppins) !important;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.bg-dark {
+    background-color: var(--gray) !important;
+}
+
+.card {
+    background-color: var(--gray) !important;
+}
+
+.text-orange {
+    color: #FF7426 !important;
+}
+
+.btn-primary {
+    background-color: var(--orange) !important;
+    color: #fff;
+    border: none;
+}
+
+.bg-secondary {
+    background-color: var(--lightGray);
+}
+
+.btn-warning {
+    background-color: var(--orange) !important;
+    border: none;
+    width: 164px;
+    height: 45px;
+}
 
 /* Navbar */
 
-
-.navbar {
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    padding: 0 10%;
-    width: 100%;
-    height: 90px;
-    background: var(--white);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    z-index: 999;
+a.nav-link.dropdown-toggle::after {
+    color: var(--orange) !important;
 }
 
-.navLogo {
-    width: 55px;
+.dropdown-item::before {
+    color: #FF7426;
 }
 
-.navList {
-    display: flex;
-    gap: 35px;
-    font-size: 19px;
-    list-style: none;
+.dropdown-menu.show {
+    background-color: var(--lightGray) !important;
 }
 
-.navLink {
-    text-decoration: none;
-    color: var(--purple);
-    font-family: var(--raleway);
-    font-weight: bold;
-    text-transform: uppercase;
+.dropdown-menu.show .dropdown-item {
+    background-color: var(--lightGray);
+}
+
+.navShadow {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.listNavbar li>a:hover {
+    transition: ease-in-out 0.4s;
+    color: var(--orange) !important;
 }
 
 
-/* Header */
-
-.header {
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    padding: 0 10%;
-    background: linear-gradient(180deg, #FFFFFF 88.46%, #FDFCFD 91.21%, #FBFAFC 91.21%, #F5F2F7 92.4%, #E5DEEB 93.41%, #BFAECE 94.87%, #B09CC3 95.88%, #A48DBA 96.71%, #8F72AA 98.54%, #7D5C9D 100.01%);
-}
+/* Headline */
 
 .headline {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: flex-start;
-    flex: 35%;
-    height: 500px;
+    width: 100%;
+    height: 100vh;
 }
 
-.headline h1 {
-    color: var(--purple);
-    font-family: var(--roboto);
-    text-transform: uppercase;
-    font-size: 90px;
-    letter-spacing: 0.05em;
-    font-style: normal;
-    text-shadow: 0px 10px 5px rgba(0, 0, 0, 0.5);
+.containerHeadline {
+    width: 100%;
+    height: 100vh;
 }
 
-.headline h3 {
+h1.headlineFont {
     font-family: var(--raleway);
-    font-style: normal;
     font-weight: 700;
-    font-size: 27px;
-    margin-top: -20px;
+    font-size: 85px;
     letter-spacing: 0.05em;
-    color: var(--purple);
+    text-transform: uppercase;
+    text-shadow: 0px 4px 4px var(--orange);
 }
 
-.headline h5 {
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 25px;
-    letter-spacing: 0.1em;
-    color: var(--purple);
+h3.headlineFont {
+    font-size: 28px;
+    letter-spacing: 0.12em;
+}
+
+p.headlineFont {
+    font-size: 20px;
+    letter-spacing: 0.40em;
+    text-decoration: underline #ff76269d;
+    text-decoration-style: wavy;
+}
+
+a.headlineFont {
+    text-transform: uppercase;
+}
+
+.arrow-right {
+    width: 40px;
+}
+
+/* Headline Images */
+
+.orangeSquare {
+    width: 590px;
+    height: 400px;
+    background-color: var(--orange);
+    right: 0;
+    bottom: 20vh;
+    position: absolute;
+    background: linear-gradient(90deg, rgba(255, 116, 38, 0.7) 1.72%, rgba(255, 116, 38, 0) 117.32%);
+    filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.5));
+    border-radius: 20px 0px 0px 10px;
+}
+
+.whiteSquare {
+    width: 280px;
+    height: 240px;
+    background: #d9d9d9;
+    position: absolute;
+    bottom: -70px;
+    left: -3vw;
+    box-shadow: 0px 10px 4px rgba(255, 116, 38, 0.24);
+    border-radius: 0px 0px 7px 7px;
+    z-index: 1;
+}
+
+.imgInsdustria {
+    width: 520px;
+    height: 330px;
+    background: url('../images/headlineIndustria.jpg');
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.5));
+    border-radius: 10px;
+    z-index: 2;
+    top: 8vh;
+    right: 10vw;
 }
 
 .imgHeadline {
-    display: flex;
-    justify-content: center;
-    flex: 45%;
-
-}
-
-.imgHeadline img {
-    width: 84%;
-}
-
-/* section engineering */
-
-.aEngenharia {
-    width: 100%;
-    height: 550px;
-    padding: 0 10%;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    background: #380568;
-}
-
-.aEngTitle {
-    flex: 30%;
-    display: flex;
-    align-items: center;
-}
-
-.aEngTitle h2 {
-    text-transform: uppercase;
-    color: var(--white);
-    font-family: var(--raleway);
-    font-size: 50px;
-    margin-top: 50px;
-}
-
-.aEngText {
-    flex: 70%;
-    display: flex;
-    align-items: center;
-    margin-bottom: 50px;
-
-}
-
-.aEngText p {
-    font-family: var(--raleway);
-    font-style: normal;
-    font-weight: 300;
-    font-size: 25px;
-    line-height: 41px;
-    color: var(--white);
-}
-
-/* eng Computacao */
-
-.engComputacao {
-    position: relative;
-    width: 100%;
-}
-
-.engComputacaoBg {
-    width: 100%;
-    height: 600px;
-    background: rgba(0, 0, 0, 0.432) url("../images/engComputacao.jpg");
-    background-blend-mode: darken;
-    background-size: cover;
+    width: 490px;
+    height: 330px;
+    background: url('../images/headline.jpg');
     background-position: center;
-
-}
-
-.blackBlur {
+    background-size: cover;
     position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(3, 1, 7, 0.7);
-    filter: blur(1px);
-}
-
-.containerComputacao {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-flow: column;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    padding: 5% 10% 0 10%;
+    z-index: 3;
+    border-radius: 10px;
+    filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.5));
+    top: 15vh;
+    right: 5vw;
 }
 
 
-.computacaoTitle {
-    font-size: 50px;
-    font-family: var(--roboto);
+/* Área engenharia em geral */
+
+.containerEngenharia {
+    width: 100%;
+    min-height: 600px;
+    /* background-color: red; */
+}
+
+h2.engenhariaFont {
     text-transform: uppercase;
-    color: var(--white);
-    letter-spacing: 2px;
+    font-weight: 700;
+    font-size: 60px;
+    margin-top: 40px;
 }
 
-.computacaoTitle:nth-child(1) {
-    color: var(--lightPurple);
-}
-
-.textComputacao {
-    display: flex;
-    align-items: center;
-    width: 70%;
-    height: 270px;
-}
-
-.textComputacao p {
-    font-size: 22px;
-    font-family: var(--raleway);
-    color: var(--white);
-    font-weight: 400;
-    letter-spacing: 0.5px;
-}
-
-.techArea {
-    position: absolute;
-    display: flex;
-    width: 100%;
-    height: 500px;
-    padding: 5% 10% 0 10%;
-}
-
-.profeProfile {
-    flex: 70%;
-    height: 300px;
-}
-
-.profeProfileContent h2 {
-    font-size: 45px;
-    font-family: var(--roboto);
-    text-transform: uppercase;
-    color: var(--lightPurple);
-    letter-spacing: 2px;
-}
-
-
-.profeProfileContent h2:nth-child(1) {
-    color: var(--purple);
-}
-
-
-.profeProfileText {
+p.engenhariaFont {
     margin-top: 20px;
-    color: var(--purple);
-    font-size: 24px;
-    font-family: var(--raleway);
+    font-weight: 300;
+    font-size: 23px;
+    text-align: justify;
 }
 
-/* Continuar */
 
-.imgPersoProfile {
-    position: relative;
-    flex: 30%;
-    height: 300px;
-    padding-bottom: 10px;
-}
+/* Área lista das principais engenharias */
 
-.imgPersoProfile img {
-    width: calc(100% + 25px);
-    position: absolute;
-    bottom: 0;
-    filter: drop-shadow(10px 0px 2px rgba(0, 0, 0, 0.4));
-}
-
-.profeProfileArea {
+.containerListAreas {
     width: 100%;
-    height: 375px;
+    height: 620px;
+    /* background-color: blue; */
+}
+
+.listEngenharias {
+    list-style-image: url('../images/curved-arrow.png');
 }
 
 
-.computacaoAreaInfo {
-    margin: 0 10%;
-    padding-top: 60px;
-    width: 80%;
-    height: 100%;
-    border-top: 1px solid var(--purple);
-    display: flex;
-    flex-flow: column;
+.listEngenharias li>a {
+    font-weight: 300;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px;
 }
 
-.areasInfo {
-    display: flex;
-    width: 100%;
+.listEngenharias li>a:hover {
+    transition: ease-in-out 0.4s;
+    color: var(--orange) !important;
 }
 
-.mSalarialArea,
-.areaAtuacao {
-    display: flex;
-    padding: 30px 20px;
-    flex: 50%;
-    height: 420px;
-    align-items: center;
-    flex-flow: column;
-    gap: 30px;
-}
-
-.infoTitle {
+h2.listAreaFont {
+    text-transform: uppercase;
     font-size: 40px;
-    color: var(--purple);
-    text-transform: uppercase;
-    font-family: var(--roboto);
+    font-weight: 700;
 }
 
-.infoText {
+h5.listAreaFont {
+    font-size: 27px;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+/* Área Dúvidas frequentes */
+
+.containerDuvidas {
+    width: 100%;
+    min-height: 600px;
+    /* background-color: yellow; */
+}
+
+.areaDuvidas {
+    width: 100%;
+    min-height: 380px;
+    background-color: var(--lightGray);
+    box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    position: relative;
+}
+
+.headerDuvidas {
+    width: 800px;
+    height: 1px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.areaTitle {
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    background: #181818;
+    border-radius: 10px;
+    top: -35px;
+}
+
+h2.fontDuvidas {
+    font-weight: 700;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.areaTitle img {
+    width: 40px;
+}
+
+.duvidasContent {
+    width: 100%;
+    height: 100%;
+    /* background-color: green; */
+    margin-top: 34px;
+}
+
+h4.fontDuvidas {
+    font-weight: 500;
     font-size: 22px;
-    color: var(--purple);
-    font-family: var(--raleway);
 }
 
-
-.faculdadesArea {
-    width: 100%;
-    height: 500px;
+p.fontDuvidas {
+    font-weight: 400;
+    font-size: 20px;
 }
 
-.faculTitle {
-    width: 100%;
-    color: var(--purple);
-    font-size: 45px;
-    font-family: var(--roboto);
+/* Cursos */
+
+h2.cursosFont {
+    font-weight: 700;
+    font-size: 50px;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
-    padding: 20px;
-    text-align: center;
+}
+
+p.cursosFont {
+    font-weight: 300;
+    font-size: 23px;
+    text-align: justify;
+    width: 85%;
+}
+
+
+/* Áreas de atuação e perfil profissional */
+
+.containerPerfil {
+    width: 100%;
+    min-height: 560px;
+    padding-bottom: 80px;
+}
+
+h2.perfilFont {
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+p.perfilFont {
+    font-weight: 300;
+    font-size: 23px;
+    letter-spacing: 0.02em;
+}
+
+/* Faculdades */
+
+.containerFaculdades {
+    width: 100%;
+    min-height: 500px;
+    background-color: var(--lightGray);
+    border-radius: 5px;
+}
+
+h2.faculdadesFont {
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 38px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 
-.faculTitle span {
-    color: #BEBDC5;
-}
+/* Engenharia da computação */
 
-
-.areaCards{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.containerComputacao {
     width: 100%;
-    height: 300px;
-    gap: 15px;
+    height: 570px;
+    background: rgba(0, 0, 0, 0.751) url('../images/engComputacao.jpg');
+    background-blend-mode: darken;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.cardFacul{
-    position: relative;
-    width: 300px;
-    height: 200px;
-    border-radius: 5px;
-    background-color: #D9D9D9;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+
+/* Engenharia Civil */
+
+.containerCivil {
+    width: 100%;
+    height: 570px;
+    background: rgba(0, 0, 0, 0.779) url('../images/engCivil.jpg');
+    background-blend-mode: darken;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.gradeCurricular{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 2px 0 5px 0;
-    cursor: pointer;
-    background-color: var(--lightPurple);
-    color: var(--purple);
-    font-weight: 600;
+/* Engenharia Elétrica */
+
+.containerEletrica {
+    width: 100%;
+    height: 570px;
+    background: rgba(0, 0, 0, 0.779) url('../images/engEletrica.jpg');
+    background-blend-mode: darken;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Engenharia Química */
+
+.containerQuimica {
+    width: 100%;
+    height: 570px;
+    background: rgba(0, 0, 0, 0.779) url('../images/engQuimica.jpg');
+    background-blend-mode: darken;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Engenharia de Produção */
+
+.containerProducao {
+    width: 100%;
+    height: 570px;
+    background: rgba(0, 0, 0, 0.779) url('../images/engProducao.jpg');
+    background-blend-mode: darken;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Engenharia de Controle e Automação */
+
+.containerControleAutomacao {
+    width: 100%;
+    height: 570px;
+    background: rgba(0, 0, 0, 0.779) url('../images/engControleAutomacao.jpg');
+    background-blend-mode: darken;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Engenharia Aeronáutica */
+
+.containerAeronautica {
+    width: 100%;
+    height: 570px;
+    background: rgba(0, 0, 0, 0.779) url('../images/engAeronautica.jpg');
+    background-blend-mode: darken;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Engenharia Mecânica */
+
+.containerMecanica {
+    width: 100%;
+    height: 570px;
+    background: rgba(0, 0, 0, 0.779) url('../images/engMecanica.jpg');
+    background-blend-mode: darken;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Engenharia Ambiental */
+
+.containerAmbiental {
+    width: 100%;
+    height: 570px;
+    background: rgba(0, 0, 0, 0.779) url('../images/engAmbiental.jpg');
+    background-blend-mode: darken;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Engenharia Agronômica */
+
+.containerAgronomica {
+    width: 100%;
+    height: 570px;
+    background: rgba(0, 0, 0, 0.779) url('../images/engAgronomica.jpg');
+    background-blend-mode: darken;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* Fim da área dos cursos */
+
+
+
+/* Área Pós-Graduação */
+
+.containerPosGrad {
+    width: 100%;
+    min-height: 700px;
+    /* background-color: darkblue;  */
+}
+
+h2.posGradFont {
+    font-weight: 700;
+    font-size: 45px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+p.posGradFont {
+    font-weight: 300;
+    font-size: 23px;
+    letter-spacing: 0.02em;
+}
+
+.accordion-item {
+    margin: 10px;
+}
+
+.posGradTabFont {
+    color: var(--orange) !important;
+}
+
+.accordion-header {
+    background-color: var(--lightGray) !important;
+}
+
+.accordion-body {
+    background-color: var(--lightGray) !important;
+    color: #fff;
+}
+
+.accordion-button {
+    color: var(--orange) !important;
+}
+
+.accordion-button {
+    background-color: transparent !important;
+}
+
+.accordion-button:focus {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+
+
+/* Área Creas */
+
+.containerCreas {
+    width: 100%;
+    min-height: 400px;
+    background-color: var(--gray);
+}
+
+.containerCircles a {
+    text-decoration: none;
     font-family: var(--raleway);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.containerCircles a:hover {
+    opacity: 0.8;
+    transform: scale(1.05)
+}
+
+.circle {
+    background-color: var(--orange);
+    height: 40px;
+    width: 40px;
+}
+
+h2.conselhosFont {
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+p.conselhosFont {
+    font-weight: 300;
+    font-size: 23px;
+    letter-spacing: 0.02em;
+}
+
+.custom-tooltip {
+    --bs-tooltip-bg: var(--orange);
+}
+
+.alertConselhos {
+    background-color: #414141;
+    width: 500px;
+    height: 60px;
+}
+
+/* Footer */
+
+.footer {
+    width: 100%;
+    min-height: 500px;
+    padding: 80px 0;
+    background-color: #000000;
+}
+
+h3.footerFont {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: 0.02em;
+}
+
+.navFooter {
+    list-style: none;
+    padding: 0;
+}
+
+a.footerFont {
+    font-weight: 300;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a.footerFont:hover {
+    transition: ease-in-out 0.4s;
+    color: var(--orange) !important;
+}
+
+legend.duvidasFont {
+    font-size: 25px;
+    font-weight: 500;
+    /* text-transform: uppercase; */
+}
+
+.containerInput label {
+    color: #919191;
+}
+
+.containerInput {
+    width: 420px;
+}
+
+.invalid-feedback {
+    color: #f49e6b !important;
+}
+
+.btnForm {
+    width: 100px;
+    border-radius: 3px;
+}
+
+.btnForm:hover {
+    opacity: 0.8;
+}
+
+.containerSocial {
+    margin-top: 50px;
+    min-height: 500px;
+    width: 100%;
+    border-top: 1px solid var(--orange);
+    padding-top: 50px;
+}
+
+.cardSocial {
+    width: 240px;
+    height: 300px;
+    transition: .5s;
+}
+
+.imgCardSocial {
+    width: 100%;
+}
+
+.cardSocial img {
+    width: 70px;
+}
+
+a.cardSocialFont {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 0.02em;
+}
+
+a.cardSocialFont:hover,
+.cardSocial .btn-primary:hover {
+    opacity: 0.8;
+}
+
+p.cardSocialFont {
+    font-weight: 300;
+    font-size: 17px;
+    letter-spacing: 0.02em;
+}
+
+.cardSocial:hover {
+    transform: translateY(-10px);
+    filter: drop-shadow(0px 4px 4px #FF7426);
+}
+
+
+
+/* Responsive CSS */
+
+
+
+
+@media (max-width: 991.98px) {
+
+    /* Reset */
+
+    p {
+        font-size: 12px !important;
+    }
+
+
+    h5 {
+        font-size: 14px !important;
+    }
+
+    h2 {
+        font-size: 22px !important;
+    }
+
+    a {
+        font-size: 12px !important;
+    }
+
+    /* Navbar */
+
+    .navbar-brand {
+        width: 40px;
+    }
+
+    /* Headline */
+
+    .headline {
+        padding-top: 100px;
+        width: 100%;
+        height: 400px !important;
+        display: flex;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.806) url('../images/bgHeadline-sm.jpg');
+        background-blend-mode: darken;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+
+    .headline-sm {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1.headlineFont {
+        font-size: 42px;
+    }
+
+    h3.headlineFont {
+        font-size: 18px;
+    }
+
+    a.headlineFont {
+        font-size: 10px !important;
+    }
+
+    p.headlineFont {
+        font-size: 18px !important;
+    }
+
+    .arrow-right {
+        width: 30px;
+        margin-bottom: 5px;
+    }
+
+    a.btn-warning {
+        width: 100px;
+        height: 30px;
+    }
+
+    .containerImages {
+        display: none;
+    }
+
+    /* Engenharia Geral */
+
+    .containerEngenharia {
+        width: 100%;
+        min-height: 340px;
+    }
+
+    /* Principais cursos */
+
+    .containerListAreas {
+        height: 520px !important;
+    }
+
+    h5.listAreaFont {
+        margin-bottom: 0;
+    }
+
+    /* Dúvidas frequentes */
+
+
+    .containerDuvidas {
+        width: 100%;
+        min-height: 600px;
+    }
+
+    .headerDuvidas {
+        width: 100%;
+    }
+
+    .areaTitle {
+        height: 50px;
+        border-radius: 7px 7px 0 0;
+        top: 0;
+    }
+
+    .areaTitle img {
+        width: 30px;
+    }
+
+    .cardDuvidas img {
+        width: 60px;
+    }
+
+    h4.fontDuvidas {
+        font-size: 14px;
+    }
+
+    p.fontDuvidas {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    /* Cursos */
+
+    p.cursosFont {
+        width: 100%;
+    }
+
+    /* Áreas de atuação e perfil profissional */
+
+
+    .containerPerfil {
+        width: 100%;
+        min-height: 560px;
+        padding-bottom: 80px;
+    }
+
+    .perfilArea {
+        margin-top: 0 !important;
+        padding-bottom: 10px;
+    }
+
+    .perfilImg {
+        display: none !important;
+    }
+
+
+    /* Faculdades */
+
+    .containerFaculdades {
+        width: 100%;
+        min-height: 500px;
+        background-color: var(--lightGray);
+        border-radius: 5px;
+    }
+
+    h2.faculdadesFont {
+        font-size: 26px !important;
+    }
+
+    .cardFaculdade {
+        margin: 0 auto;
+        width: 270px !important;
+        height: 400px;
+        margin-bottom: 20px;
+    }
+
+
+
+    /* Engenharia da computação */
+
+    .containerComputacao {
+        height: 360px !important;
+    }
+
+    /* Engenharia Civil */
+
+    .containerCivil {
+        height: 360px !important;
+    }
+
+    /* Engenharia Elétrica */
+
+    .containerEletrica {
+        height: 360px !important;
+    }
+
+    /* Engenharia Química */
+
+    .containerQuimica {
+        height: 360px !important;
+    }
+
+    /* Engenharia de Produção */
+
+    .containerProducao {
+        height: 360px !important;
+    }
+
+    /* Engenharia de Controle e Automação */
+
+    .containerControleAutomacao {
+        height: 360px !important;
+    }
+
+    /* Engenharia Aeronáutica */
+
+    .containerAeronautica {
+        height: 360px !important;
+    }
+
+    /* Engenharia Mecânica */
+
+    .containerMecanica {
+        height: 360px !important;
+    }
+
+    /* Engenharia Ambiental */
+
+    .containerAmbiental {
+        height: 360px !important;
+    }
+
+    /* Engenharia Agronômica */
+
+    .containerAgronomica {
+        height: 360px !important;
+    }
+
+    /* Pós-Graduação */
+
+    .containerPosGrad {
+        min-height: 500px !important;
+    }
+
+    h2.posGradFont {
+        padding-top: 0px !important;
+        font-size: 30px !important;
+    }
+
+    /* Conselhos */
+
+    .conatainerCreas {
+        padding-top: 0 !important;
+    }
+
+    .alertConselhos {
+        width: 98% !important;
+        height: 50px !important;
+        margin: 0 auto;
+    }
+
+    .areaCircles {
+        padding-top: 20px;
+        justify-content: center !important;
+        align-items: center;
+    }
+
+    .circle {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Footer */
+
+    h3.footerFont {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navFooter {
+        align-items: center !important;
+    }
+
+
+    a.footerFont {
+        font-size: 16px !important;
+    }
+
+
+    legend.duvidasFont {
+        margin-top: 32px;
+    }
+
+    .formFooter {
+        padding: 0 5% !important;
+    }
+
+    .cardSocial {
+        width: 200px;
+        height: 280px;
+    }
+
+    .imgCardSocial {
+        width: 100%;
+    }
+
+    .cardSocial img {
+        width: 70px;
+    }
+
+    .scdRowFooter {
+        margin-top: 20px;
+    }
+
+    .dropdown-item::before {
+        transform: rotate(-90deg);
+    }
+}
+
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+
+    p {
+        font-size: 18px !important;
+    }
+
+
+    h5 {
+        font-size: 14px !important;
+    }
+
+    h2 {
+        font-size: 30px !important;
+    }
+
+    a {
+        font-size: 12px !important;
+    }
+
+
+    .headline {
+        padding-top: 100px;
+        width: 100%;
+        height: 700px !important;
+        display: flex;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.806) url('../images/bgHeadline-sm.jpg');
+        background-blend-mode: darken;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+
+    .containerImages {
+        display: none;
+    }
+
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+
+    h1.headlineFont {
+        font-size: 70px;
+    }
 }
