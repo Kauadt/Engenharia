@@ -42,11 +42,6 @@ nav a {
     position: relative;
 }
 
-/* 
-body{
-    background-color: var(--gray);
-} */
-
 
 h1,
 h2,
@@ -126,8 +121,11 @@ a.nav-link.dropdown-toggle::after {
 /* Headline */
 
 .headline {
+    position: relative;
     width: 100%;
     height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
 .containerHeadline {
@@ -147,6 +145,7 @@ h1.headlineFont {
 h3.headlineFont {
     font-size: 28px;
     letter-spacing: 0.12em;
+    white-space: nowrap;
 }
 
 p.headlineFont {
@@ -166,12 +165,18 @@ a.headlineFont {
 
 /* Headline Images */
 
+.containerImages{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .orangeSquare {
     width: 590px;
     height: 400px;
     background-color: var(--orange);
     right: 0;
-    bottom: 20vh;
     position: absolute;
     background: linear-gradient(90deg, rgba(255, 116, 38, 0.7) 1.72%, rgba(255, 116, 38, 0) 117.32%);
     filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.5));
@@ -224,7 +229,6 @@ a.headlineFont {
 .containerEngenharia {
     width: 100%;
     min-height: 600px;
-    /* background-color: red; */
 }
 
 h2.engenhariaFont {
@@ -247,7 +251,6 @@ p.engenhariaFont {
 .containerListAreas {
     width: 100%;
     height: 620px;
-    /* background-color: blue; */
 }
 
 .listEngenharias {
@@ -284,7 +287,6 @@ h5.listAreaFont {
 .containerDuvidas {
     width: 100%;
     min-height: 600px;
-    /* background-color: yellow; */
 }
 
 .areaDuvidas {
@@ -325,7 +327,6 @@ h2.fontDuvidas {
 .duvidasContent {
     width: 100%;
     height: 100%;
-    /* background-color: green; */
     margin-top: 34px;
 }
 
@@ -528,7 +529,6 @@ h2.faculdadesFont {
 .containerPosGrad {
     width: 100%;
     min-height: 700px;
-    /* background-color: darkblue;  */
 }
 
 h2.posGradFont {
@@ -1066,7 +1066,6 @@ p.cardSocialFont {
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
 
-
     p {
         font-size: 18px !important;
     }
@@ -1098,16 +1097,69 @@ p.cardSocialFont {
         background-repeat: no-repeat;
     }
 
-
     .containerImages {
         display: none;
     }
 
+    .imgEngCivil{
+        width: 300px;
+    }
+    .imgEngEletrica{
+        width: 300px;
+    }
+    .imgEngProducao{
+        width: 340px;
+    }
+    .imgEngAeronautica{
+        width: 300px;
+    }
+    .imgEngMecanica{
+        width: 320px;
+    }
 }
 
 @media (min-width: 1200px) and (max-width: 1399.98px) {
 
     h1.headlineFont {
         font-size: 70px;
+    }
+
+    .imgEngCivil{
+        width: 400px;
+    }
+    .imgEngEletrica{
+        width: 400px;
+    }
+    .imgEngProducao{
+        width: 440px;
+    }
+    .imgEngAeronautica{
+        width: 400px;
+    }
+    .imgEngMecanica{
+        width: 420px;
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 1499.98px) {
+
+    h1.headlineFont {
+        font-size: 70px;
+    }
+
+    .imgEngCivil{
+        width: 400px;
+    }
+    .imgEngEletrica{
+        width: 400px;
+    }
+    .imgEngProducao{
+        width: 440px;
+    }
+    .imgEngAeronautica{
+        width: 400px;
+    }
+    .imgEngMecanica{
+        width: 420px;
     }
 }
