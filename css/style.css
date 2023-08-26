@@ -120,7 +120,7 @@ a.nav-link.dropdown-toggle::after {
 
 /* Headline */
 
-.headline {
+/* .headline {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -162,8 +162,6 @@ a.headlineFont {
 .arrow-right {
     width: 40px;
 }
-
-/* Headline Images */
 
 .containerImages{
     height: 100%;
@@ -221,6 +219,110 @@ a.headlineFont {
     filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.5));
     top: 15vh;
     right: 5vw;
+} */
+
+
+/* Cópia */
+
+.headline {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.containerHeadline {
+    width: 100%;
+    height: 100vh;
+}
+
+h1.headlineFont {
+    font-family: var(--raleway);
+    font-weight: 700;
+    font-size: 85px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-shadow: 0px 4px 4px var(--orange);
+}
+
+h3.headlineFont {
+    font-size: 28px;
+    letter-spacing: 0.12em;
+    white-space: nowrap;
+}
+
+p.headlineFont {
+    font-size: 20px;
+    letter-spacing: 0.40em;
+    text-decoration: underline #ff76269d;
+    text-decoration-style: wavy;
+}
+
+a.headlineFont {
+    text-transform: uppercase;
+}
+
+.arrow-right {
+    width: 40px;
+}
+
+.containerImages{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.orangeSquare {
+    width: 540px;
+    height: 350px;
+    background-color: var(--orange);
+    right: 0;
+    position: absolute;
+    background: linear-gradient(90deg, rgba(255, 116, 38, 0.7) 1.72%, rgba(255, 116, 38, 0) 117.32%);
+    filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.5));
+    border-radius: 20px 0px 0px 10px;
+}
+
+.whiteSquare {
+    width: 230px;
+    height: 190px;
+    background: #d9d9d9;
+    position: absolute;
+    bottom: -70px;
+    left: -3vw;
+    box-shadow: 0px 10px 4px rgba(255, 116, 38, 0.24);
+    border-radius: 0px 0px 7px 7px;
+    z-index: 1;
+}
+
+.imgInsdustria {
+    width: 470px;
+    height: 280px;
+    background: url('../images/headlineIndustria.jpg');
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.5));
+    border-radius: 10px;
+    z-index: 2;
+    top: 8vh;
+    right: 10vw;
+}
+
+.imgHeadline {
+    width: 440px;
+    height: 280px;
+    background: url('../images/headline.jpg');
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    z-index: 3;
+    border-radius: 10px;
+    filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.5));
+    top: 15vh;
+    right: 5vw;
 }
 
 
@@ -228,20 +330,20 @@ a.headlineFont {
 
 .containerEngenharia {
     width: 100%;
-    min-height: 600px;
+    min-height: 390px;
 }
 
 h2.engenhariaFont {
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 60px;
-    margin-top: 40px;
+    font-size: 40px;
+    margin-top: 45px;
+    margin-bottom: 25px;
 }
 
 p.engenhariaFont {
-    margin-top: 20px;
     font-weight: 300;
-    font-size: 23px;
+    font-size: 1.2em;
     text-align: justify;
 }
 
@@ -250,7 +352,7 @@ p.engenhariaFont {
 
 .containerListAreas {
     width: 100%;
-    height: 620px;
+    height: 440px;
 }
 
 .listEngenharias {
@@ -271,15 +373,17 @@ p.engenhariaFont {
 }
 
 h2.listAreaFont {
-    text-transform: uppercase;
-    font-size: 40px;
+    /* text-transform: uppercase; */
+    font-size: 36px;
     font-weight: 700;
 }
 
 h5.listAreaFont {
-    font-size: 27px;
-    margin-bottom: 30px;
     font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 16px;
+    margin-top: 10px;
+    line-height: 36px;
 }
 
 /* Área Dúvidas frequentes */
@@ -291,7 +395,7 @@ h5.listAreaFont {
 
 .areaDuvidas {
     width: 100%;
-    min-height: 380px;
+    min-height: 350px;
     background-color: var(--lightGray);
     box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
@@ -327,12 +431,12 @@ h2.fontDuvidas {
 .duvidasContent {
     width: 100%;
     height: 100%;
-    margin-top: 34px;
+    margin-top: 10px;
 }
 
 h4.fontDuvidas {
     font-weight: 500;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 p.fontDuvidas {
@@ -350,8 +454,8 @@ h2.cursosFont {
 }
 
 p.cursosFont {
-    font-weight: 300;
-    font-size: 23px;
+    font-weight: 400;
+    font-size: 20px;
     text-align: justify;
     width: 85%;
 }
@@ -367,16 +471,17 @@ p.cursosFont {
 
 h2.perfilFont {
     font-weight: 700;
-    font-size: 40px;
+    font-size: 35px;
     letter-spacing: 0.02em;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 p.perfilFont {
     font-weight: 300;
-    font-size: 23px;
+    font-size: 20px;
     letter-spacing: 0.02em;
+    text-align: justify;
 }
 
 /* Faculdades */
@@ -402,8 +507,8 @@ h2.faculdadesFont {
 
 .containerComputacao {
     width: 100%;
-    height: 570px;
-    background: rgba(0, 0, 0, 0.751) url('../images/engComputacao.jpg');
+    min-height: 570px;
+    background: rgba(0, 0, 0, 0.836) url('../images/engComputacao.jpg');
     background-blend-mode: darken;
     background-size: cover;
     background-position: center;
@@ -416,7 +521,7 @@ h2.faculdadesFont {
 .containerCivil {
     width: 100%;
     height: 570px;
-    background: rgba(0, 0, 0, 0.779) url('../images/engCivil.jpg');
+    background: rgba(0, 0, 0, 0.836) url('../images/engCivil.jpg');
     background-blend-mode: darken;
     background-size: cover;
     background-position: center;
@@ -428,55 +533,20 @@ h2.faculdadesFont {
 .containerEletrica {
     width: 100%;
     height: 570px;
-    background: rgba(0, 0, 0, 0.779) url('../images/engEletrica.jpg');
+    background: rgba(0, 0, 0, 0.836) url('../images/engEletrica.jpg');
     background-blend-mode: darken;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-/* Engenharia Química */
-
-.containerQuimica {
-    width: 100%;
-    height: 570px;
-    background: rgba(0, 0, 0, 0.779) url('../images/engQuimica.jpg');
-    background-blend-mode: darken;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-/* Engenharia de Produção */
-
-.containerProducao {
-    width: 100%;
-    height: 570px;
-    background: rgba(0, 0, 0, 0.779) url('../images/engProducao.jpg');
-    background-blend-mode: darken;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
 
 /* Engenharia de Controle e Automação */
 
 .containerControleAutomacao {
     width: 100%;
     height: 570px;
-    background: rgba(0, 0, 0, 0.779) url('../images/engControleAutomacao.jpg');
-    background-blend-mode: darken;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-/* Engenharia Aeronáutica */
-
-.containerAeronautica {
-    width: 100%;
-    height: 570px;
-    background: rgba(0, 0, 0, 0.779) url('../images/engAeronautica.jpg');
+    background: rgba(0, 0, 0, 0.836) url('../images/engControleAutomacao.jpg');
     background-blend-mode: darken;
     background-size: cover;
     background-repeat: no-repeat;
@@ -488,36 +558,13 @@ h2.faculdadesFont {
 .containerMecanica {
     width: 100%;
     height: 570px;
-    background: rgba(0, 0, 0, 0.779) url('../images/engMecanica.jpg');
+    background: rgba(0, 0, 0, 0.836) url('../images/engMecanica.jpg');
     background-blend-mode: darken;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-/* Engenharia Ambiental */
-
-.containerAmbiental {
-    width: 100%;
-    height: 570px;
-    background: rgba(0, 0, 0, 0.779) url('../images/engAmbiental.jpg');
-    background-blend-mode: darken;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-/* Engenharia Agronômica */
-
-.containerAgronomica {
-    width: 100%;
-    height: 570px;
-    background: rgba(0, 0, 0, 0.779) url('../images/engAgronomica.jpg');
-    background-blend-mode: darken;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
 
 
 /* Fim da área dos cursos */
