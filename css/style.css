@@ -367,6 +367,19 @@ p.engenhariaFont {
     padding: 10px;
 }
 
+.cardCursos{
+    background-color: #383838 !important;
+}
+
+.cardCursos a{
+    text-decoration: underline #ff762668;
+    text-decoration-style: wavy;
+}
+.cardCursos a:hover{
+    text-decoration: underline #ffffff68;
+    text-decoration-style: wavy;
+}
+
 .listEngenharias li>a:hover {
     transition: ease-in-out 0.4s;
     color: var(--orange) !important;
@@ -386,11 +399,38 @@ h5.listAreaFont {
     line-height: 36px;
 }
 
+/* Área Importância da engenharia */
+
+.containerEngImport {
+    width: 100%;
+    min-height: 440px;
+    padding-bottom: 100px;
+}
+
+.containerEngImport > .container > h2{
+    font-size: 36px;
+    font-weight: 700;
+}
+
 /* Área Dúvidas frequentes */
+
+.containerArrow{
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.containerArrow h3{
+    font-weight: 600;
+    font-size: 32px;
+}
 
 .containerDuvidas {
     width: 100%;
-    min-height: 600px;
+    min-height: 700px;
 }
 
 .areaDuvidas {
@@ -488,7 +528,7 @@ p.perfilFont {
 
 .containerFaculdades {
     width: 100%;
-    min-height: 500px;
+    min-height: 400px;
     background-color: var(--lightGray);
     border-radius: 5px;
 }
