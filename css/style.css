@@ -117,113 +117,6 @@ a.nav-link.dropdown-toggle::after {
     color: var(--orange) !important;
 }
 
-
-/* Headline */
-
-/* .headline {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-}
-
-.containerHeadline {
-    width: 100%;
-    height: 100vh;
-}
-
-h1.headlineFont {
-    font-family: var(--raleway);
-    font-weight: 700;
-    font-size: 85px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    text-shadow: 0px 4px 4px var(--orange);
-}
-
-h3.headlineFont {
-    font-size: 28px;
-    letter-spacing: 0.12em;
-    white-space: nowrap;
-}
-
-p.headlineFont {
-    font-size: 20px;
-    letter-spacing: 0.40em;
-    text-decoration: underline #ff76269d;
-    text-decoration-style: wavy;
-}
-
-a.headlineFont {
-    text-transform: uppercase;
-}
-
-.arrow-right {
-    width: 40px;
-}
-
-.containerImages{
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.orangeSquare {
-    width: 590px;
-    height: 400px;
-    background-color: var(--orange);
-    right: 0;
-    position: absolute;
-    background: linear-gradient(90deg, rgba(255, 116, 38, 0.7) 1.72%, rgba(255, 116, 38, 0) 117.32%);
-    filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.5));
-    border-radius: 20px 0px 0px 10px;
-}
-
-.whiteSquare {
-    width: 280px;
-    height: 240px;
-    background: #d9d9d9;
-    position: absolute;
-    bottom: -70px;
-    left: -3vw;
-    box-shadow: 0px 10px 4px rgba(255, 116, 38, 0.24);
-    border-radius: 0px 0px 7px 7px;
-    z-index: 1;
-}
-
-.imgInsdustria {
-    width: 520px;
-    height: 330px;
-    background: url('../images/headlineIndustria.jpg');
-    background-position: center;
-    background-size: contain;
-    position: absolute;
-    filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.5));
-    border-radius: 10px;
-    z-index: 2;
-    top: 8vh;
-    right: 10vw;
-}
-
-.imgHeadline {
-    width: 490px;
-    height: 330px;
-    background: url('../images/headline.jpg');
-    background-position: center;
-    background-size: cover;
-    position: absolute;
-    z-index: 3;
-    border-radius: 10px;
-    filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.5));
-    top: 15vh;
-    right: 5vw;
-} */
-
-
-/* Cópia */
-
 .headline {
     position: relative;
     width: 100%;
@@ -352,19 +245,7 @@ p.engenhariaFont {
 
 .containerListAreas {
     width: 100%;
-    height: 440px;
-}
-
-.listEngenharias {
-    list-style-image: url('../images/curved-arrow.png');
-}
-
-
-.listEngenharias li>a {
-    font-weight: 300;
-    font-size: 20px;
-    text-decoration: none;
-    padding: 10px;
+    min-height: 440px;
 }
 
 .cardCursos{
@@ -379,6 +260,10 @@ p.engenhariaFont {
     text-decoration: underline #ffffff68;
     text-decoration-style: wavy;
 }
+.cardCursos:hover{
+transform: scale(1.02);
+transition: 0.3s ease;
+}
 
 .listEngenharias li>a:hover {
     transition: ease-in-out 0.4s;
@@ -386,7 +271,6 @@ p.engenhariaFont {
 }
 
 h2.listAreaFont {
-    /* text-transform: uppercase; */
     font-size: 36px;
     font-weight: 700;
 }
@@ -412,77 +296,6 @@ h5.listAreaFont {
     font-weight: 700;
 }
 
-/* Área Dúvidas frequentes */
-
-.containerArrow{
-    padding-top: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.containerArrow h3{
-    font-weight: 600;
-    font-size: 32px;
-}
-
-.containerDuvidas {
-    width: 100%;
-    min-height: 700px;
-}
-
-.areaDuvidas {
-    width: 100%;
-    min-height: 350px;
-    background-color: var(--lightGray);
-    box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    position: relative;
-}
-
-.headerDuvidas {
-    width: 800px;
-    height: 1px;
-    margin: 0 auto;
-    position: relative;
-}
-
-.areaTitle {
-    position: absolute;
-    width: 100%;
-    height: 70px;
-    background: #181818;
-    border-radius: 10px;
-    top: -35px;
-}
-
-h2.fontDuvidas {
-    font-weight: 700;
-    font-size: 40px;
-    text-transform: uppercase;
-}
-
-.areaTitle img {
-    width: 40px;
-}
-
-.duvidasContent {
-    width: 100%;
-    height: 100%;
-    margin-top: 10px;
-}
-
-h4.fontDuvidas {
-    font-weight: 500;
-    font-size: 20px;
-}
-
-p.fontDuvidas {
-    font-weight: 400;
-    font-size: 20px;
-}
 
 /* Cursos */
 
@@ -513,7 +326,6 @@ h2.perfilFont {
     font-weight: 700;
     font-size: 35px;
     letter-spacing: 0.02em;
-    /* text-transform: uppercase; */
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -573,7 +385,7 @@ h2.faculdadesFont {
 .containerEletrica {
     width: 100%;
     height: 570px;
-    background: rgba(0, 0, 0, 0.836) url('../images/engEletrica.jpg');
+    background: rgba(0, 0, 0, 0.836) url('../images/engEletrica.webp');
     background-blend-mode: darken;
     background-size: cover;
     background-position: center;
@@ -586,7 +398,7 @@ h2.faculdadesFont {
 .containerControleAutomacao {
     width: 100%;
     height: 570px;
-    background: rgba(0, 0, 0, 0.836) url('../images/engControleAutomacao.jpg');
+    background: rgba(0, 0, 0, 0.836) url('../images/engControleAutomacao.webp');
     background-blend-mode: darken;
     background-size: cover;
     background-repeat: no-repeat;
@@ -610,12 +422,30 @@ h2.faculdadesFont {
 /* Fim da área dos cursos */
 
 
+.doubtsCircle{
+    min-width: 140px;
+    height: 45px;
+    border-radius: 169px;
+    background-color: #FF7426;
+    margin-bottom: 70px;
+    padding: 22px;
+    transition: all 0.5s ease;
+}
+.doubtsSquare{
+    min-width: 140px;
+    height: 45px;
+    background-color: #FF7426;
+    margin-bottom: 70px;
+    padding: 22px;
+    transition: all 0.5s ease;
+}
+
 
 /* Área Pós-Graduação */
 
 .containerPosGrad {
     width: 100%;
-    min-height: 700px;
+    min-height: 520px;
 }
 
 h2.posGradFont {
