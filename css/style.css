@@ -23,10 +23,6 @@ nav a {
     transition: 0.5 ease-in-out;
 }
 
-
-/* #2E2D32 
-    #575757
-*/
 :root {
     --gray: #242426;
     --lightGray: #414141;
@@ -41,7 +37,6 @@ nav a {
     background-color: var(--gray);
     position: relative;
 }
-
 
 h1,
 h2,
@@ -148,8 +143,6 @@ h3.headlineFont {
 p.headlineFont {
     font-size: 20px;
     letter-spacing: 0.40em;
-    text-decoration: underline #ff76269d;
-    text-decoration-style: wavy;
 }
 
 a.headlineFont {
@@ -248,18 +241,18 @@ p.engenhariaFont {
     min-height: 440px;
 }
 
+.listWrap{
+    flex-flow: wrap;
+}
+
 .cardCursos{
     background-color: #383838 !important;
 }
 
 .cardCursos a{
-    text-decoration: underline #ff762668;
-    text-decoration-style: wavy;
+    text-decoration: none;
 }
-.cardCursos a:hover{
-    text-decoration: underline #ffffff68;
-    text-decoration-style: wavy;
-}
+
 .cardCursos:hover{
 transform: scale(1.02);
 transition: 0.3s ease;
@@ -296,6 +289,21 @@ h5.listAreaFont {
     font-weight: 700;
 }
 
+.imgCarouselFilter{
+    position: relative; 
+}
+
+.imgCarouselFilter::before {
+    content: ""; 
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000bd;
+    pointer-events: none;
+}
+
 
 /* Cursos */
 
@@ -312,6 +320,36 @@ p.cursosFont {
     text-align: justify;
     width: 85%;
 }
+
+
+.doubtsCircle{
+    border-radius: 169px;
+    width: 250px;
+    height: 50px;
+    background-color: #FF7426;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+    color: #fff;
+    font-weight: 500;
+    font-family: var(--poppins);
+}
+
+.doubtsSquare{
+    width: 250px;
+    height: 70px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #FF7426;
+    font-weight: 600;
+    font-family: var(--poppins);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
 
 
 /* Áreas de atuação e perfil profissional */
@@ -359,7 +397,7 @@ h2.faculdadesFont {
 
 .containerComputacao {
     width: 100%;
-    min-height: 570px;
+    min-height: 780px;
     background: rgba(0, 0, 0, 0.836) url('../images/engComputacao.jpg');
     background-blend-mode: darken;
     background-size: cover;
@@ -372,7 +410,7 @@ h2.faculdadesFont {
 
 .containerCivil {
     width: 100%;
-    height: 570px;
+    min-height: 700px;
     background: rgba(0, 0, 0, 0.836) url('../images/engCivil.jpg');
     background-blend-mode: darken;
     background-size: cover;
@@ -384,8 +422,8 @@ h2.faculdadesFont {
 
 .containerEletrica {
     width: 100%;
-    height: 570px;
-    background: rgba(0, 0, 0, 0.836) url('../images/engEletrica.webp');
+    min-height: 630px;
+    background: rgba(0, 0, 0, 0.836) url('../images/engEletrica.jpg');
     background-blend-mode: darken;
     background-size: cover;
     background-position: center;
@@ -397,7 +435,7 @@ h2.faculdadesFont {
 
 .containerControleAutomacao {
     width: 100%;
-    height: 570px;
+    min-height: 570px;
     background: rgba(0, 0, 0, 0.836) url('../images/engControleAutomacao.webp');
     background-blend-mode: darken;
     background-size: cover;
@@ -409,7 +447,7 @@ h2.faculdadesFont {
 
 .containerMecanica {
     width: 100%;
-    height: 570px;
+    min-height: 650px;
     background: rgba(0, 0, 0, 0.836) url('../images/engMecanica.jpg');
     background-blend-mode: darken;
     background-size: cover;
@@ -422,23 +460,7 @@ h2.faculdadesFont {
 /* Fim da área dos cursos */
 
 
-.doubtsCircle{
-    min-width: 140px;
-    height: 45px;
-    border-radius: 169px;
-    background-color: #FF7426;
-    margin-bottom: 70px;
-    padding: 22px;
-    transition: all 0.5s ease;
-}
-.doubtsSquare{
-    min-width: 140px;
-    height: 45px;
-    background-color: #FF7426;
-    margin-bottom: 70px;
-    padding: 22px;
-    transition: all 0.5s ease;
-}
+
 
 
 /* Área Pós-Graduação */
@@ -584,7 +606,6 @@ a.footerFont:hover {
 legend.duvidasFont {
     font-size: 25px;
     font-weight: 500;
-    /* text-transform: uppercase; */
 }
 
 .containerInput label {
@@ -750,7 +771,7 @@ p.cardSocialFont {
     /* Principais cursos */
 
     .containerListAreas {
-        height: 520px !important;
+        min-height: 520px !important;
     }
 
     h5.listAreaFont {
