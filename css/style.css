@@ -778,6 +778,17 @@ p.cardSocialFont {
         margin-bottom: 0;
     }
 
+    .imgCarouselFilter > img{
+        height: 200px !important;
+    }
+
+    .containerArrow{
+        gap: 10px;
+    }
+    .containerArrow > img{
+        width: 38px;
+    }
+
     /* Dúvidas frequentes */
 
 
@@ -813,11 +824,26 @@ p.cardSocialFont {
         padding-top: 0 !important;
     }
 
+   
+
     /* Cursos */
 
     p.cursosFont {
         width: 100%;
     }
+
+    .doubtsCircle{
+        width: 200px;
+        height: 40px;
+        font-size: 10px;
+    }
+    .doubtsSquare{
+        width: 200px;
+        height: 50px;
+        font-size: 10px;
+    }
+    
+    
 
     /* Áreas de atuação e perfil profissional */
 
@@ -857,7 +883,6 @@ p.cardSocialFont {
         height: 400px;
         margin-bottom: 20px;
     }
-
 
 
     /* Engenharia da computação */
